@@ -1,0 +1,17 @@
+puppet agent –version
+puppet config print
+puppet config print confdir
+puppet config print certname
+puppet config print { confdir rundir ssldir runinterval }
+** runinterval is the time after which client will check into the server
+cat /etc/profile.d/puppet-agent.sh
+
+puppetserver ca list –all
+puppet facts show
+puppet facts show networking
+puppet facts show os.family
+puppet agent -t -v –noop -d
+
+# Installing module on server machine
+puppet module install puppetlabs-mysql --version 12.0.1
+
